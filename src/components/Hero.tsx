@@ -77,8 +77,9 @@ const Hero: React.FC = () => {
               View My Work
             </button>
             <a 
-              href={`${process.env.PUBLIC_URL}/Resume.pdf`} 
-              download="Rohith_Kumar_Pittala_Resume.pdf"
+              href="https://drive.google.com/uc?export=download&id=1JkHir4ZJP-kn-Bl364VJAm4rewDTCQKY" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-secondary"
             >
               Download Resume

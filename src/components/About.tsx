@@ -42,7 +42,7 @@ const About: React.FC = () => {
                   {/* Replace with your profile picture */}
                   {!imageError ? (
                     <img 
-                      src={`${process.env.PUBLIC_URL}/profile.jpg`} 
+                      src="https://i.imgur.com/txK4jNS.jpg" 
                       alt="Rohith Kumar Pittala" 
                       className="w-full h-full object-cover rounded-full"
                       onError={() => setImageError(true)}
@@ -118,8 +118,9 @@ Skilled in building smart, scalable solutions using machine learning, natural la
 
             <div className="pt-6">
               <a 
-                href={`${process.env.PUBLIC_URL}/Resume.pdf`} 
-                download="Rohith_Kumar_Pittala_Resume.pdf"
+                href="https://drive.google.com/uc?export=download&id=1JkHir4ZJP-kn-Bl364VJAm4rewDTCQKY" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
               >
                 Download Resume
