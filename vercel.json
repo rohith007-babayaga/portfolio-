@@ -11,7 +11,16 @@
   ],
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/profile.jpg",
+      "dest": "/profile.jpg"
+    },
+    {
+      "src": "/Resume.pdf",
+      "dest": "/Resume.pdf"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",

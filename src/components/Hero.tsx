@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
               View My Work
             </button>
             <a 
-              href="/Resume.pdf" 
+              href={`${process.env.PUBLIC_URL}/Resume.pdf`} 
               download="Rohith_Kumar_Pittala_Resume.pdf"
               className="btn-secondary"
             >

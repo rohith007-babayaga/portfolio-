@@ -42,7 +42,7 @@ const About: React.FC = () => {
                   {/* Replace with your profile picture */}
                   {!imageError ? (
                     <img 
-                      src="/profile.jpg" 
+                      src={`${process.env.PUBLIC_URL}/profile.jpg`} 
                       alt="Rohith Kumar Pittala" 
                       className="w-full h-full object-cover rounded-full"
                       onError={() => setImageError(true)}
@@ -118,7 +118,7 @@ Skilled in building smart, scalable solutions using machine learning, natural la
 
             <div className="pt-6">
               <a 
-                href="/Resume.pdf" 
+                href={`${process.env.PUBLIC_URL}/Resume.pdf`} 
                 download="Rohith_Kumar_Pittala_Resume.pdf"
                 className="btn-primary"
               >
