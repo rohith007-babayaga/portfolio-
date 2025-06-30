@@ -39,7 +39,7 @@ const About: React.FC = () => {
                 <div className="w-full h-full rounded-full bg-white dark:bg-dark-800 flex items-center justify-center overflow-hidden">
                   {/* Replace with your profile picture */}
                   <img 
-                    src="/profile.jpg" 
+                    src="./profile.jpg" 
                     alt="Rohith Kumar Pittala" 
                     className="w-full h-full object-cover rounded-full"
                     onError={(e) => {
@@ -118,9 +118,13 @@ Skilled in building smart, scalable solutions using machine learning, natural la
             </div>
 
             <div className="pt-6">
-              <button className="btn-primary">
+              <a 
+                href="/Resume.pdf" 
+                download
+                className="btn-primary"
+              >
                 Download Resume
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>

@@ -70,12 +70,19 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <button className="btn-primary">
+            <button 
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-primary"
+            >
               View My Work
             </button>
-            <button className="btn-secondary">
+            <a 
+              href="/Resume.pdf" 
+              download
+              className="btn-secondary"
+            >
               Download Resume
-            </button>
+            </a>
           </motion.div>
 
           {/* Social Links - UPDATE WITH YOUR ACTUAL LINKS */}
