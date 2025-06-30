@@ -78,8 +78,7 @@ const Hero: React.FC = () => {
             </button>
             <a 
               href="/Resume.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
+              download="Rohith_Kumar_Pittala_Resume.pdf"
               className="btn-secondary"
             >
               Download Resume
