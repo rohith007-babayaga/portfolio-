@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
             </button>
             <a 
               href="/Resume.pdf" 
-              download
+              download="Rohith_Kumar_Pittala_Resume.pdf"
               className="btn-secondary"
             >
               Download Resume

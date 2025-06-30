@@ -8,6 +8,8 @@ const About: React.FC = () => {
     threshold: 0.1,
   });
 
+  const [imageError, setImageError] = React.useState(false);
+
   return (
     <section id="about" className="section-padding bg-white dark:bg-dark-900">
       <div className="container-custom">
@@ -38,21 +40,18 @@ const About: React.FC = () => {
               <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-primary-400 to-purple-600 p-1">
                 <div className="w-full h-full rounded-full bg-white dark:bg-dark-800 flex items-center justify-center overflow-hidden">
                   {/* Replace with your profile picture */}
-                  <img 
-                    src="./profile.jpg" 
-                    alt="Rohith Kumar Pittala" 
-                    className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      // Fallback to initials if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      target.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                  {/* Fallback initials */}
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900 dark:to-purple-900 flex items-center justify-center hidden">
-                    <span className="text-6xl font-bold gradient-text">RK</span>
-                  </div>
+                  {!imageError ? (
+                    <img 
+                      src="/profile.jpg" 
+                      alt="Rohith Kumar Pittala" 
+                      className="w-full h-full object-cover rounded-full"
+                      onError={() => setImageError(true)}
+                    />
+                  ) : (
+                    <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900 dark:to-purple-900 flex items-center justify-center">
+                      <span className="text-6xl font-bold gradient-text">RK</span>
+                    </div>
+                  )}
                 </div>
               </div>
               {/* Floating elements */}
@@ -120,7 +119,7 @@ Skilled in building smart, scalable solutions using machine learning, natural la
             <div className="pt-6">
               <a 
                 href="/Resume.pdf" 
-                download
+                download="Rohith_Kumar_Pittala_Resume.pdf"
                 className="btn-primary"
               >
                 Download Resume
